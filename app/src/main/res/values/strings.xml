@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Pitbull</string>
+    <string name="app_name">Pitbull by 3707</string>
+
+    <string name="i_am_a">I am a…</string>
+    <string name="i_am_a_student">Student</string>
+    <string name="i_am_a_mentor">Mentor</string>
+
+<!--    mentor things-->
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="welcome_mentor">Welcome, Mentor</string>
+    <string name="team_number">Team number</string>
+    <string name="sign_up_for_crowdscout">Sign up for CrowdScout</string>
+    <string name="push_to_crowdscout">Push to CrowdScout</string>
+    <string name="pull_from_crowdscout">Pull from CrowdScout</string>
+    <string name="create_firebase_db">Create your own database</string>
+    <string name="team_already_has_account">My team already has an account</string>
 </resources>

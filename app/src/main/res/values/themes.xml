@@ -3,6 +3,9 @@
     <style name="Base.Theme.Pitbull" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="background">@color/background_light</item>
+        <item name="colorOnBackground">@color/text_light</item>
     </style>
 
     <style name="Theme.Pitbull" parent="Base.Theme.Pitbull" />

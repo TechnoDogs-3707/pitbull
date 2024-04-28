@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAutofill="no">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome_mentor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sign_in_with_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sign_in_with_google"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/team_number_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/team_number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/sign_in_with_google"
+        app:layout_constraintStart_toStartOf="@+id/sign_in_with_google"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_google" />
+
+    <CheckBox
+        android:id="@+id/sign_up_for_crowdscout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sign_up_for_crowdscout"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/team_number_input"
+        app:layout_constraintStart_toStartOf="@+id/team_number_input"
+        app:layout_constraintTop_toBottomOf="@+id/team_number_input" />
+
+    <CheckBox
+        android:id="@+id/push_to_crowdscout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/push_to_crowdscout"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_for_crowdscout"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_for_crowdscout"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_for_crowdscout" />
+
+    <CheckBox
+        android:id="@+id/pull_from_crowdscout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pull_from_crowdscout"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/push_to_crowdscout"
+        app:layout_constraintStart_toStartOf="@+id/push_to_crowdscout"
+        app:layout_constraintTop_toBottomOf="@+id/push_to_crowdscout" />
+
+    <Button
+        android:id="@+id/team_already_has_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/team_already_has_account"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

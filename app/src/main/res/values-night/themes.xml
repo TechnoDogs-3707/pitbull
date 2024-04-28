@@ -3,5 +3,8 @@
     <style name="Base.Theme.Pitbull" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="background">@color/background_dark</item>
+        <item name="colorOnBackground">@color/text_dark</item>
     </style>
 </resources>
