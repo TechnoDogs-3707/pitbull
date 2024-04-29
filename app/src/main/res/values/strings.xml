@@ -1,4 +1,6 @@
 <resources>
+    <string name="web_client_id">223598392749-q06f1oc0ne3ot1nje6ndomnkg1t125vu.apps.googleusercontent.com</string>
+
     <string name="app_name">Pitbull by 3707</string>
 
     <string name="i_am_a">I am a…</string>
@@ -13,5 +15,6 @@
     <string name="push_to_crowdscout">Push to CrowdScout</string>
     <string name="pull_from_crowdscout">Pull from CrowdScout</string>
     <string name="create_firebase_db">Create your own database</string>
+    <string name="im_not_a_mentor">I\'m not a mentor</string>
     <string name="team_already_has_account">My team already has an account</string>
 </resources>

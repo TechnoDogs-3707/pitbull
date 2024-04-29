@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mentor_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:importantForAutofill="no">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/welcome_mentor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -27,7 +28,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome_mentor" />
 
     <EditText
         android:id="@+id/team_number_input"
@@ -50,8 +51,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/primary_dark"
+        android:buttonTint="@color/primary_dark"
+        android:drawableTint="@color/primary_dark"
+        android:foregroundTint="@color/primary_dark"
         android:text="@string/sign_up_for_crowdscout"
         android:visibility="gone"
+        app:buttonIconTint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/team_number_input"
         app:layout_constraintStart_toStartOf="@+id/team_number_input"
         app:layout_constraintTop_toBottomOf="@+id/team_number_input" />
@@ -60,8 +66,13 @@
         android:id="@+id/push_to_crowdscout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
+        android:buttonTint="@color/primary_dark"
+        android:drawableTint="@color/primary_dark"
+        android:foregroundTint="@color/primary_dark"
         android:text="@string/push_to_crowdscout"
         android:visibility="gone"
+        app:buttonIconTint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_for_crowdscout"
         app:layout_constraintStart_toStartOf="@+id/sign_up_for_crowdscout"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_for_crowdscout" />
@@ -70,8 +81,13 @@
         android:id="@+id/pull_from_crowdscout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
+        android:buttonTint="@color/primary_dark"
+        android:drawableTint="@color/primary_dark"
+        android:foregroundTint="@color/primary_dark"
         android:text="@string/pull_from_crowdscout"
         android:visibility="gone"
+        app:buttonIconTint="@color/primary_dark"
         app:layout_constraintEnd_toEndOf="@+id/push_to_crowdscout"
         app:layout_constraintStart_toStartOf="@+id/push_to_crowdscout"
         app:layout_constraintTop_toBottomOf="@+id/push_to_crowdscout" />
@@ -85,6 +101,17 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/im_not_a_mentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/im_not_a_mentor"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/team_already_has_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

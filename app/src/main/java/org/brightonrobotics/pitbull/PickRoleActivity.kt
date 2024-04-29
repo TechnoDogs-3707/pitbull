@@ -17,7 +17,7 @@ class PickRoleActivity : AppCompatActivity() {
         mentorButton = findViewById(R.id.select_mentor)
 
         studentButton.setOnClickListener {
-            // Start the student activity
+            // Start the student sign in activity
         }
 
         mentorButton.setOnClickListener {
