@@ -30,4 +30,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="if_this_is_incorrect">* If this is not true, that is okay.</string>
+
+<!--    display team data-->
+    <string name="info_for_joining">Info for joining</string>
 </resources>
