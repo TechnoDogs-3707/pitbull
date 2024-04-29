@@ -70,7 +70,7 @@ class MentorActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.continue_button_mentor).setOnClickListener {
             val intent = Intent(this, ConfirmDataActivity::class.java)
-            intent.putExtra("userData", auth.currentUser)
+            intent.putExtra("name", auth.currentUser?.displayName)
             intent.putExtra("teamNumber", findViewById<EditText>(R.id.team_number_input).text.toString())
             startActivity(intent)
         }

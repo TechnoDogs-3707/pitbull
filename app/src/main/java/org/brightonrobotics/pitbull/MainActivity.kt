@@ -24,7 +24,7 @@ fun getRole(context: Context): Int? {
     val json = JSONObject(settings)
     return if (json.has("role")) {
         val role = json.getInt("role")
-        if (role == 1 || role == 2) role else null
+        if (role == 1 /*mentor*/ || role == 2 /*student*/) role else null
     } else {
         null
     }
@@ -40,11 +40,7 @@ class MainActivity : AppCompatActivity() {
         if (role == null) {
             startActivity(Intent(this, PickRoleActivity::class.java))
         } else {
-            if (role == 1) {
-                // Student
-            } else {
-                startActivity(Intent(this, MentorActivity::class.java))
-            }
+            // do something based on role
         }
     }
 }
