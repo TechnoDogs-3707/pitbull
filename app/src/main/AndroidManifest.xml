@@ -30,6 +30,9 @@
 
         <activity
             android:name=".ConfirmDataActivity" />
+
+        <activity
+            android:name=".DisplayTeamDataActivity" />
     </application>
 
 </manifest>
