@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.storage.ktx)
+    implementation(libs.firebase.appcheck.debug)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -57,4 +58,6 @@ dependencies {
     //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-auth")
     implementation(libs.play.services.auth)
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-database")
 }

@@ -69,6 +69,10 @@ class MentorActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.continue_button_mentor).setOnClickListener {
+            if (findViewById<EditText>(R.id.team_number_input).text.toString().isEmpty()) {
+                Toast.makeText(this, "Please enter a team number", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val intent = Intent(this, ConfirmDataActivity::class.java)
             intent.putExtra("name", auth.currentUser?.displayName)
             intent.putExtra("teamNumber", findViewById<EditText>(R.id.team_number_input).text.toString())

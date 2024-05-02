@@ -33,7 +33,7 @@ class DisplayTeamDataActivity : AppCompatActivity() {
                         "role": 1,
                         "name": "${intent.getStringExtra("name")}",
                         "teamNumber": $teamNumber,
-                        "joinCode": $joinCode
+                        "joinCode": "$joinCode"
                     }
                 """.trimIndent()
             )

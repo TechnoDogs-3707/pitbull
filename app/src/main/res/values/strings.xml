@@ -1,8 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="web_client_id">571502467552-bbmlkdi948hrfcnkvm9gmbv7utf2fmqt.apps.googleusercontent.com</string>
-    <string name="supabase_url">https://ooixjwpxzwtrxnyyirii.supabase.co</string>
-    <string name="supabase_key" tools:ignore="Typos">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vaXhqd3B4end0cnhueXlpcmlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MDEyODYsImV4cCI6MjAyOTk3NzI4Nn0.ArbpzcyXucBgBJjRQ3KFgSnYeas9cugz8NqJl7UGxT4</string>
-
+<resources>
     <string name="app_name">Pitbull by 3707</string>
 
     <string name="i_am_a">I am a…</string>
@@ -17,22 +13,21 @@
     <string name="sign_up_for_crowdscout">Sign up for CrowdScout</string>
     <string name="push_to_crowdscout">Push to CrowdScout</string>
     <string name="pull_from_crowdscout">Pull from CrowdScout</string>
-    <string name="create_firebase_db">Create your own database</string>
     <string name="im_not_a_mentor">I\'m not a mentor</string>
     <string name="team_already_has_account">My team already has an account</string>
 
 <!--    confirm-->
     <string name="is_this_correct">Is this correct?</string>
     <string name="you_are_on_team">You are on team…</string>
-    <string name="your_name_is">* Your name is…</string>
-    <string name="noah_harper">Noah Harper</string>
-    <string name="team_number_3707">3707</string>
+    <string name="your_name_is">Your name is…</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="if_this_is_incorrect">* If this is not true, that is okay.</string>
 
 <!--    display team data-->
     <string name="info_for_joining">Info for joining</string>
     <string name="join_code">Join code</string>
     <string name="find_later">You can find this later in settings</string>
+
+<!--    sign in-->
+    <string name="join_a_team">Join a team</string>
 </resources>
