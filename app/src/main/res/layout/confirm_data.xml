@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/team_number"
+        android:id="@+id/team_number_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -44,9 +44,9 @@
         android:layout_marginTop="12dp"
         android:text="@string/your_name_is"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/team_number"
-        app:layout_constraintStart_toStartOf="@+id/team_number"
-        app:layout_constraintTop_toBottomOf="@+id/team_number" />
+        app:layout_constraintEnd_toEndOf="@+id/team_number_show"
+        app:layout_constraintStart_toStartOf="@+id/team_number_show"
+        app:layout_constraintTop_toBottomOf="@+id/team_number_show" />
 
     <TextView
         android:id="@+id/name"

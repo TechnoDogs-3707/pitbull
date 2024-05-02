@@ -7,7 +7,7 @@ import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.tasks.await
 import java.util.*
 
-suspend fun generateUniqueJoinCode(teamNumber: String) {
+suspend fun generateUniqueJoinCode(teamNumber: String): String {
     val storage = Firebase.storage("gs://pitbull-421814.appspot.com")
     val directory = storage.reference.child("data").child(teamNumber)
 
@@ -18,6 +18,7 @@ suspend fun generateUniqueJoinCode(teamNumber: String) {
 
     val codeFile = directory.child("code.txt")
     codeFile.putBytes(uniqueCode.toByteArray()).await()
+    return uniqueCode
 }
 
 suspend fun codeExistsInFirebase(directory: StorageReference, code: String): Boolean {

@@ -33,4 +33,6 @@
 
 <!--    display team data-->
     <string name="info_for_joining">Info for joining</string>
+    <string name="join_code">Join code</string>
+    <string name="find_later">You can find this later in settings</string>
 </resources>
