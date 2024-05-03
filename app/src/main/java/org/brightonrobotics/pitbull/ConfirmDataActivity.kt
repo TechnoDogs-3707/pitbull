@@ -52,6 +52,7 @@ class ConfirmDataActivity : AppCompatActivity() {
                     val database = Firebase.database
                     val ref = database.getReference("teams").child(teamNumberIn)
                     ref.child("joinCode").setValue(code)
+                    ref.child("ownerName").setValue(name.text.toString())
 
                     val joinCodeRef = database.getReference("joinCodes")
                     joinCodeRef.child(code).setValue(teamNumberIn)

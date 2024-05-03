@@ -33,6 +33,9 @@
 
         <activity
             android:name=".DisplayTeamDataActivity" />
+
+        <activity
+            android:name=".JoinTeamActivity" />
     </application>
 
 </manifest>

@@ -30,4 +30,5 @@
 
 <!--    sign in-->
     <string name="join_a_team">Join a team</string>
+    <string name="full_name">Full name</string>
 </resources>

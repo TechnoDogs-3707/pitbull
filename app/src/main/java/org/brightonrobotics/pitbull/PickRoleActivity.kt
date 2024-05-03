@@ -19,7 +19,7 @@ class PickRoleActivity : AppCompatActivity() {
         mentorButton = findViewById(R.id.select_mentor)
 
         studentButton.setOnClickListener {
-            // Start the student sign in activity
+            startActivity(Intent(this, JoinTeamActivity::class.java))
         }
 
         mentorButton.setOnClickListener {
