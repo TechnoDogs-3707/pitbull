@@ -1,6 +1,7 @@
 // i am sorry for this nightmarish code
 // good luck
 // the generateUniqueJoinCode function is found in Utils.kt btw
+// also sorry about the nested if statement, i am too lazy to put in a try catch block
 
 package org.brightonrobotics.pitbull
 
@@ -8,6 +9,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +22,7 @@ import kotlinx.coroutines.launch
 @OptIn(DelicateCoroutinesApi::class)
 class ConfirmDataActivity : AppCompatActivity() {
     private lateinit var teamNumber: TextView
-    private lateinit var name: TextView
+    private lateinit var name: EditText
     private lateinit var noButton: Button
     private lateinit var yesButton: Button
 
@@ -44,29 +46,39 @@ class ConfirmDataActivity : AppCompatActivity() {
             val code = generateAlphanumericCode(6)
 
             if (
-                !isTeamNumberExists(teamNumberIn)
+                !isJoinCodeExists(code)
             ) {
-                val database = Firebase.database
-                val ref = database.getReference("teams").child(teamNumberIn)
-                ref.child("joinCode").setValue(code)
+                if (!isTeamNumberExists(teamNumberIn)) {
+                    val database = Firebase.database
+                    val ref = database.getReference("teams").child(teamNumberIn)
+                    ref.child("joinCode").setValue(code)
 
-                startActivity(
-                    Intent(this@ConfirmDataActivity, DisplayTeamDataActivity::class.java).apply {
-                        putExtra("teamNumber", teamNumberIn)
-                        putExtra("joinCode", code)
-                        putExtra("name", name.text.toString())
+                    val joinCodeRef = database.getReference("joinCodes")
+                    joinCodeRef.child(code).setValue(teamNumberIn)
+
+                    startActivity(
+                        Intent(
+                            this@ConfirmDataActivity,
+                            DisplayTeamDataActivity::class.java
+                        ).apply {
+                            putExtra("teamNumber", teamNumberIn)
+                            putExtra("joinCode", code)
+                            putExtra("name", name.text.toString())
+                        }
+                    )
+                } else {
+                    startActivity(Intent(this, MentorActivity::class.java))
+
+                    runOnUiThread {
+                        Toast.makeText(
+                            this@ConfirmDataActivity,
+                            "Team already exists",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-                )
-            } else {
-                startActivity(Intent(this, MentorActivity::class.java))
-
-                runOnUiThread {
-                    Toast.makeText(
-                        this@ConfirmDataActivity,
-                        "Team already exists",
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
+            } else {
+                getCode(teamNumberIn)
             }
         }
 
