@@ -65,6 +65,7 @@ class ConfirmDataActivity : AppCompatActivity() {
                             putExtra("teamNumber", teamNumberIn)
                             putExtra("joinCode", code)
                             putExtra("name", name.text.toString())
+                            putExtra("googleAuthUid", intent.getStringExtra("googleAuthUid"))
                         }
                     )
                 } else {

@@ -78,6 +78,7 @@ class MentorActivity : AppCompatActivity() {
             val intent = Intent(this, ConfirmDataActivity::class.java)
             intent.putExtra("name", auth.currentUser?.displayName)
             intent.putExtra("teamNumber", findViewById<EditText>(R.id.team_number_input).text.toString())
+            intent.putExtra("googleAuthUid", auth.currentUser?.uid)
             startActivity(intent)
         }
 
